@@ -1,12 +1,12 @@
 package project;
 
+
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +22,7 @@ public class Guru99
  @BeforeTest
  public void beforeTest() throws InterruptedException
  {
-   System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Documents\\Automation Setup\\Browser Extension\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Documents\\Automation Setup\\Browser Extension\\chromedriver.exe");
    driver=new ChromeDriver();
    Thread.sleep(1200);
    driver.manage().window().maximize();
@@ -36,7 +36,7 @@ public class Guru99
   @Test
   public void f() throws InterruptedException 
   {
-	//Register****
+	//*Register*********
 	 	 driver.findElement(By.xpath("/html/body/div[3]/a")).click();
 	 	 
 	 	 //1 DropDown
@@ -109,13 +109,7 @@ public class Guru99
 		  driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[3]/input")).click();
 		  Thread.sleep(2000);
 		  
-		//How to Scroll Down
-	     	 JavascriptExecutor js=(JavascriptExecutor)driver;//Type cast
-	    	 Thread.sleep(2000);
-	     	 js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
-	     	 Thread.sleep(2000);
-		  
-         //**MouseHover**
+         //*****MouseHover*******
 		  
 		    //step 1 Create object of action class
 			Actions a=new Actions(driver);
@@ -141,11 +135,11 @@ public class Guru99
 			}
 		  
 		  
-		//HOME*****
+		//HOME***********
 		  driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[1]/a")).click();
 		  Thread.sleep(1200);
 		  
-		  //RETRIVE QUOTATION ****
+		  //RETRIVE QUOTATION ********
 		  driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[3]/a")).click();
 		  Thread.sleep(1200);
 		  
@@ -158,11 +152,11 @@ public class Guru99
 		  //  driver.findElement(By.xpath("/html/body/div[3]/div/div[3]/form/input[2]")).click();
 		  //  Thread.sleep(1200);
 		  
-		  //profile****
+		  //profile**********
 		  driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[4]/a")).click();
 		  Thread.sleep(1200);
 		  
-		  //edit profile****
+		  //edit profile**********
 		  driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[5]/a")).click();
 		  Thread.sleep(1200);
 		  
@@ -228,7 +222,7 @@ public class Guru99
 				Thread.sleep(1000);
 		  
 		  
-		//REQUEST QUOTATION ***
+		//REQUEST QUOTATION *******
 		  driver.findElement(By.xpath("/html/body/div[3]/div/ul/li[2]/a")).click();
 		  Thread.sleep(1200);
 		  
@@ -257,10 +251,8 @@ public class Guru99
 		  Thread.sleep(1200);
 		  
 		  //parking location
-		  s = new Select(driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/form/div[7]/h5[5]/select")));
-		  //step 2:Select option
-		  s.selectByVisibleText("Public place");
-		  Thread.sleep(2000);
+		  driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/form/div[7]/h5[5]/select")).click();
+		  Thread.sleep(1200);
 		  
 		  //start of policy year
 		  driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/form/div[7]/h5[6]/select[1]")).click();
@@ -274,7 +266,7 @@ public class Guru99
 		  driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/form/div[7]/h5[6]/select[3]")).click();
 		  Thread.sleep(1200);
 		  
-		  //Save quotation
+		  //Save quotaion
 		  driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/form/div[8]/input[3]")).click();
 		  Thread.sleep(1200);	
 	  }
